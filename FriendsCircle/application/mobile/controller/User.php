@@ -47,7 +47,7 @@ class User extends Controller{
 		}
 		$file = request()->file('file');
 		if($file){
-			$info = $file->move(ROOT_PATH.'public/static/head');
+			$info = $file->move(ROOT_PATH.'public/static/mobile/images/head');
 			$head = $info->getSaveName();
 			$data = ([
 							"username" => $username,

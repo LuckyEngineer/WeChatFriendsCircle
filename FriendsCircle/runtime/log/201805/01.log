@@ -1,0 +1,1622 @@
+---------------------------------------------------------------
+[ 2018-05-01T12:30:45+08:00 ] 127.0.0.1 GET /index.php/mobile/pyq/index
+[ info ] www.friendscircle.net/index.php/mobile/pyq/index [运行时间：1.352348s][吞吐率：0.74req/s] [内存消耗：3,014.38kb] [文件加载：58]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'pyq',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\mobile\controller\Pyq->index[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\Pyq.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\pyq\index.html [ array (
+  0 => 'username',
+  1 => 'head',
+  2 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012263s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `item` [ RunTime:0.109452s ]
+[ sql ] [ SQL ] SELECT `i`.`id`,`i`.`content`,`i`.`time`,`u`.`head`,`u`.`username`,group_concat(imgs.href separator "|") imgs FROM `item` `i` LEFT JOIN `user` `u` ON `u`.`id`=`i`.`user_id` LEFT JOIN `imgs` ON `imgs`.`item_id`=`i`.`id` GROUP BY `i`.`id` ORDER BY i.id desc [ RunTime:0.103624s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comments` [ RunTime:0.087391s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.002462s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `likes` [ RunTime:0.080285s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.002193s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.001672s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 56 [ RunTime:0.001757s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 56 [ RunTime:0.001895s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 56 [ RunTime:0.002173s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.002496s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.001811s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.001466s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:31:22+08:00 ] 127.0.0.1 GET /index.php/mobile/publish/index.html
+[ info ] www.friendscircle.net/index.php/mobile/publish/index.html [运行时间：0.281488s][吞吐率：3.55req/s] [内存消耗：1,798.82kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'publish',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/pyq/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\mobile\controller\Publish->index[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\Publish.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\publish\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-01T12:32:25+08:00 ] 127.0.0.1 POST /index.php/mobile/publish/upload.html
+[ info ] www.friendscircle.net/index.php/mobile/publish/upload.html [运行时间：0.530858s][吞吐率：1.88req/s] [内存消耗：2,850.92kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'publish',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'content-length' => '18286',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://www.friendscircle.net',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryjHdewc883mqCbEIB',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/publish/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+  'idea' => 'hello world!',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\mobile\controller\Publish->upload[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\Publish.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007169s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `item` [ RunTime:0.052883s ]
+[ sql ] [ SQL ] INSERT INTO `item` (`user_id` , `content` , `time`) VALUES (1 , 'hello world!' , 1525149144) [ RunTime:0.001952s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `imgs` [ RunTime:0.061991s ]
+[ sql ] [ SQL ] INSERT INTO `imgs` (`item_id` , `href`) VALUES (58 , '20180501\\dd0c1ca5e90f58502e49c4199f696a38.jpg') [ RunTime:0.002530s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:32:25+08:00 ] 127.0.0.1 GET /index.php/mobile/pyq/index.html
+[ info ] www.friendscircle.net/index.php/mobile/pyq/index.html [运行时间：0.458869s][吞吐率：2.18req/s] [内存消耗：2,859.09kb] [文件加载：56]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'pyq',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/publish/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\mobile\controller\Pyq->index[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\Pyq.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\pyq\index.html [ array (
+  0 => 'username',
+  1 => 'head',
+  2 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007160s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `item` [ RunTime:0.045713s ]
+[ sql ] [ SQL ] SELECT `i`.`id`,`i`.`content`,`i`.`time`,`u`.`head`,`u`.`username`,group_concat(imgs.href separator "|") imgs FROM `item` `i` LEFT JOIN `user` `u` ON `u`.`id`=`i`.`user_id` LEFT JOIN `imgs` ON `imgs`.`item_id`=`i`.`id` GROUP BY `i`.`id` ORDER BY i.id desc [ RunTime:0.048817s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comments` [ RunTime:0.057305s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 58 [ RunTime:0.002383s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `likes` [ RunTime:0.049271s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 58 [ RunTime:0.001902s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 58 [ RunTime:0.001916s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.001769s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.001912s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.001728s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 56 [ RunTime:0.001721s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 56 [ RunTime:0.001730s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 56 [ RunTime:0.001720s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.001848s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.001708s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.001695s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:32:30+08:00 ] 127.0.0.1 POST /index.php/mobile/pyq/like.html
+[ info ] www.friendscircle.net/index.php/mobile/pyq/like.html [运行时间：0.250364s][吞吐率：3.99req/s] [内存消耗：2,673.20kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'pyq',
+    2 => 'like',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'content-length' => '17',
+  'accept' => '*/*',
+  'origin' => 'http://www.friendscircle.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/pyq/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+  'flag' => '1',
+  'item_id' => '58',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\mobile\controller\Pyq->like[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\Pyq.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006494s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `likes` [ RunTime:0.051617s ]
+[ sql ] [ SQL ] INSERT INTO `likes` (`item_id` , `user_id` , `time`) VALUES (58 , 1 , 1525149150) [ RunTime:0.001903s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:32:32+08:00 ] 127.0.0.1 GET /index.php/mobile/user/logout.html
+[ info ] www.friendscircle.net/index.php/mobile/user/logout.html [运行时间：0.151743s][吞吐率：6.59req/s] [内存消耗：1,671.91kb] [文件加载：45]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/pyq/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\mobile\controller\User->logout[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-01T12:32:33+08:00 ] 127.0.0.1 GET /index.php/mobile/user/main.html
+[ info ] www.friendscircle.net/index.php/mobile/user/main.html [运行时间：0.277281s][吞吐率：3.61req/s] [内存消耗：1,790.94kb] [文件加载：46]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/pyq/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\mobile\controller\User->main[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\user\main.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-01T12:32:37+08:00 ] 127.0.0.1 GET /index.php/mobile/user/register.html
+[ info ] www.friendscircle.net/index.php/mobile/user/register.html [运行时间：0.203924s][吞吐率：4.90req/s] [内存消耗：1,795.29kb] [文件加载：46]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/main.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\mobile\controller\User->register[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\user\register.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-01T12:33:12+08:00 ] 127.0.0.1 POST /index.php/mobile/user/register_deal.html
+[ info ] www.friendscircle.net/index.php/mobile/user/register_deal.html [运行时间：0.335828s][吞吐率：2.98req/s] [内存消耗：2,764.20kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'register_deal',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'content-length' => '7653',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://www.friendscircle.net',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryWRXcYqtMBcWueqFK',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/register.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'hello',
+  'area' => 'China',
+  'tel' => '15521973090',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\mobile\controller\User->register_deal[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007493s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.064400s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'hello' LIMIT 1 [ RunTime:0.001966s ]
+[ sql ] [ SQL ] INSERT INTO `user` (`username` , `password` , `area` , `telephone` , `head`) VALUES ('hello' , '123456' , 'China' , '15521973090' , '20180501\\7037d46cb6c9e41d89764c16176aa7c6.jpg') [ RunTime:0.002156s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:33:13+08:00 ] 127.0.0.1 GET /index.php/mobile/user/login.html
+[ info ] www.friendscircle.net/index.php/mobile/user/login.html [运行时间：0.207110s][吞吐率：4.83req/s] [内存消耗：1,793.42kb] [文件加载：46]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/register.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\mobile\controller\User->login[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\user\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-01T12:33:17+08:00 ] 127.0.0.1 GET /index.php/mobile/user/get_head.html?username=hello
+[ info ] www.friendscircle.net/index.php/mobile/user/get_head.html?username=hello [运行时间：0.282476s][吞吐率：3.54req/s] [内存消耗：2,671.28kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'get_head',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'hello',
+)
+[ info ] [ RUN ] app\mobile\controller\User->get_head[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006933s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.067370s ]
+[ sql ] [ SQL ] SELECT `head` FROM `user` WHERE  `username` = 'hello' LIMIT 1 [ RunTime:0.002050s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:33:17+08:00 ] 127.0.0.1 GET /static/mobile/images/head/20180501/7037d46cb6c9e41d89764c16176aa7c6.jpg
+[ info ] www.friendscircle.net/static/mobile/images/head/20180501/7037d46cb6c9e41d89764c16176aa7c6.jpg [运行时间：0.119325s][吞吐率：8.38req/s] [内存消耗：1,332.84kb] [文件加载：38]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'mobile',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+  'head' => '20180501',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-01T12:38:57+08:00 ] 127.0.0.1 GET /index.php/mobile/user/login.html
+[ info ] www.friendscircle.net/index.php/mobile/user/login.html [运行时间：0.190834s][吞吐率：5.24req/s] [内存消耗：1,653.09kb] [文件加载：44]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/register.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\mobile\controller\User->login[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\user\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-01T12:39:01+08:00 ] 127.0.0.1 GET /index.php/mobile/user/get_head.html?username=hello
+[ info ] www.friendscircle.net/index.php/mobile/user/get_head.html?username=hello [运行时间：0.256892s][吞吐率：3.89req/s] [内存消耗：2,671.30kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'get_head',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'hello',
+)
+[ info ] [ RUN ] app\mobile\controller\User->get_head[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007563s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.050880s ]
+[ sql ] [ SQL ] SELECT `head` FROM `user` WHERE  `username` = 'hello' LIMIT 1 [ RunTime:0.001775s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:39:10+08:00 ] 127.0.0.1 POST /index.php/mobile/user/login_deal.html
+[ info ] www.friendscircle.net/index.php/mobile/user/login_deal.html [运行时间：0.293889s][吞吐率：3.40req/s] [内存消耗：2,749.76kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'login_deal',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'content-length' => '30',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://www.friendscircle.net',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'hello',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\mobile\controller\User->login_deal[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006983s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.054816s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'hello'  AND `password` = '123456' LIMIT 1 [ RunTime:0.001962s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:39:10+08:00 ] 127.0.0.1 GET /index.php/mobile/pyq/index.html
+[ info ] www.friendscircle.net/index.php/mobile/pyq/index.html [运行时间：0.447886s][吞吐率：2.23req/s] [内存消耗：2,861.22kb] [文件加载：56]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'pyq',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\mobile\controller\Pyq->index[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\Pyq.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\pyq\index.html [ array (
+  0 => 'username',
+  1 => 'head',
+  2 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006562s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `item` [ RunTime:0.044618s ]
+[ sql ] [ SQL ] SELECT `i`.`id`,`i`.`content`,`i`.`time`,`u`.`head`,`u`.`username`,group_concat(imgs.href separator "|") imgs FROM `item` `i` LEFT JOIN `user` `u` ON `u`.`id`=`i`.`user_id` LEFT JOIN `imgs` ON `imgs`.`item_id`=`i`.`id` GROUP BY `i`.`id` ORDER BY i.id desc [ RunTime:0.040621s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comments` [ RunTime:0.047804s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 58 [ RunTime:0.002423s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `likes` [ RunTime:0.045935s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 58 [ RunTime:0.001766s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 58 [ RunTime:0.001782s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.001659s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.001969s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.001646s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 56 [ RunTime:0.001716s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 56 [ RunTime:0.001774s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 56 [ RunTime:0.002391s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.001805s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.001732s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.001882s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:39:15+08:00 ] 127.0.0.1 GET /index.php/mobile/user/logout.html
+[ info ] www.friendscircle.net/index.php/mobile/user/logout.html [运行时间：0.240262s][吞吐率：4.16req/s] [内存消耗：1,671.91kb] [文件加载：45]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/pyq/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\mobile\controller\User->logout[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-01T12:39:16+08:00 ] 127.0.0.1 GET /index.php/mobile/user/main.html
+[ info ] www.friendscircle.net/index.php/mobile/user/main.html [运行时间：0.171902s][吞吐率：5.82req/s] [内存消耗：1,652.90kb] [文件加载：44]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/pyq/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\mobile\controller\User->main[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\user\main.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-01T12:39:19+08:00 ] 127.0.0.1 GET /index.php/mobile/user/register.html
+[ info ] www.friendscircle.net/index.php/mobile/user/register.html [运行时间：0.156113s][吞吐率：6.41req/s] [内存消耗：1,653.03kb] [文件加载：44]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/main.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\mobile\controller\User->register[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\user\register.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-01T12:39:33+08:00 ] 127.0.0.1 POST /index.php/mobile/user/register_deal.html
+[ info ] www.friendscircle.net/index.php/mobile/user/register_deal.html [运行时间：0.479098s][吞吐率：2.09req/s] [内存消耗：2,814.94kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'register_deal',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'content-length' => '585',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://www.friendscircle.net',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryCQtL4xJ2YaNRxcBM',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/register.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'world',
+  'area' => 'China',
+  'tel' => '1234567890',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\mobile\controller\User->register_deal[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006724s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.059632s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'world' LIMIT 1 [ RunTime:0.002242s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:40:52+08:00 ] 127.0.0.1 POST /index.php/mobile/user/register_deal.html
+[ info ] www.friendscircle.net/index.php/mobile/user/register_deal.html [运行时间：0.317578s][吞吐率：3.15req/s] [内存消耗：2,764.16kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'register_deal',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'content-length' => '79355',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://www.friendscircle.net',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryQnUmVkcWO93ARNY4',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/register.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'world',
+  'area' => 'China',
+  'tel' => '1234567890',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\mobile\controller\User->register_deal[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006583s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.054951s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'world' LIMIT 1 [ RunTime:0.001897s ]
+[ sql ] [ SQL ] INSERT INTO `user` (`username` , `password` , `area` , `telephone` , `head`) VALUES ('world' , '123456' , 'China' , '1234567890' , '20180501\\037a55757a7152b79f60e4a1cc61846f.jpg') [ RunTime:0.002021s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:40:52+08:00 ] 127.0.0.1 GET /index.php/mobile/user/login.html
+[ info ] www.friendscircle.net/index.php/mobile/user/login.html [运行时间：0.140534s][吞吐率：7.12req/s] [内存消耗：1,653.09kb] [文件加载：44]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/register.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\mobile\controller\User->login[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\user\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-01T12:40:56+08:00 ] 127.0.0.1 GET /index.php/mobile/user/get_head.html?username=world
+[ info ] www.friendscircle.net/index.php/mobile/user/get_head.html?username=world [运行时间：0.245153s][吞吐率：4.08req/s] [内存消耗：2,671.30kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'get_head',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'world',
+)
+[ info ] [ RUN ] app\mobile\controller\User->get_head[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006813s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.049316s ]
+[ sql ] [ SQL ] SELECT `head` FROM `user` WHERE  `username` = 'world' LIMIT 1 [ RunTime:0.001727s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:41:03+08:00 ] 127.0.0.1 POST /index.php/mobile/user/login_deal.html
+[ info ] www.friendscircle.net/index.php/mobile/user/login_deal.html [运行时间：0.309530s][吞吐率：3.23req/s] [内存消耗：2,749.73kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'login_deal',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'content-length' => '30',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://www.friendscircle.net',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'world',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\mobile\controller\User->login_deal[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007101s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.056157s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'world'  AND `password` = '123456' LIMIT 1 [ RunTime:0.001909s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:41:04+08:00 ] 127.0.0.1 GET /index.php/mobile/pyq/index.html
+[ info ] www.friendscircle.net/index.php/mobile/pyq/index.html [运行时间：0.449400s][吞吐率：2.23req/s] [内存消耗：2,861.22kb] [文件加载：56]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'pyq',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\mobile\controller\Pyq->index[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\Pyq.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\pyq\index.html [ array (
+  0 => 'username',
+  1 => 'head',
+  2 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006818s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `item` [ RunTime:0.054048s ]
+[ sql ] [ SQL ] SELECT `i`.`id`,`i`.`content`,`i`.`time`,`u`.`head`,`u`.`username`,group_concat(imgs.href separator "|") imgs FROM `item` `i` LEFT JOIN `user` `u` ON `u`.`id`=`i`.`user_id` LEFT JOIN `imgs` ON `imgs`.`item_id`=`i`.`id` GROUP BY `i`.`id` ORDER BY i.id desc [ RunTime:0.041373s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comments` [ RunTime:0.045091s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 58 [ RunTime:0.001764s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `likes` [ RunTime:0.045976s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 58 [ RunTime:0.002036s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 58 [ RunTime:0.001780s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.001742s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.001652s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.001723s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 56 [ RunTime:0.001940s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 56 [ RunTime:0.002125s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 56 [ RunTime:0.001876s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.001784s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.001699s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.001664s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:41:12+08:00 ] 127.0.0.1 GET /index.php/mobile/user/logout.html
+[ info ] www.friendscircle.net/index.php/mobile/user/logout.html [运行时间：0.178240s][吞吐率：5.61req/s] [内存消耗：1,671.91kb] [文件加载：45]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/pyq/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\mobile\controller\User->logout[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-01T12:41:13+08:00 ] 127.0.0.1 GET /index.php/mobile/user/main.html
+[ info ] www.friendscircle.net/index.php/mobile/user/main.html [运行时间：0.159099s][吞吐率：6.29req/s] [内存消耗：1,652.90kb] [文件加载：44]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/pyq/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\mobile\controller\User->main[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\user\main.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-01T12:41:15+08:00 ] 127.0.0.1 GET /index.php/mobile/user/login.html
+[ info ] www.friendscircle.net/index.php/mobile/user/login.html [运行时间：0.141080s][吞吐率：7.09req/s] [内存消耗：1,652.90kb] [文件加载：44]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/main.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\mobile\controller\User->login[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\user\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-01T12:41:18+08:00 ] 127.0.0.1 POST /index.php/mobile/user/login_deal.html
+[ info ] www.friendscircle.net/index.php/mobile/user/login_deal.html [运行时间：0.284179s][吞吐率：3.52req/s] [内存消耗：2,674.81kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'login_deal',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'content-length' => '24',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://www.friendscircle.net',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'lucky',
+  'password' => '',
+)
+[ info ] [ RUN ] app\mobile\controller\User->login_deal[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008199s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.056782s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'lucky'  AND `password` = '' LIMIT 1 [ RunTime:0.001934s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:41:24+08:00 ] 127.0.0.1 GET /index.php/mobile/user/get_head.html?username=lucky
+[ info ] www.friendscircle.net/index.php/mobile/user/get_head.html?username=lucky [运行时间：0.247196s][吞吐率：4.05req/s] [内存消耗：2,671.29kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'get_head',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'lucky',
+)
+[ info ] [ RUN ] app\mobile\controller\User->get_head[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006163s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.049602s ]
+[ sql ] [ SQL ] SELECT `head` FROM `user` WHERE  `username` = 'lucky' LIMIT 1 [ RunTime:0.001673s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:41:31+08:00 ] 127.0.0.1 POST /index.php/mobile/user/login_deal.html
+[ info ] www.friendscircle.net/index.php/mobile/user/login_deal.html [运行时间：0.280580s][吞吐率：3.56req/s] [内存消耗：2,749.52kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'login_deal',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'content-length' => '29',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://www.friendscircle.net',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'lucky',
+  'password' => 'lucky',
+)
+[ info ] [ RUN ] app\mobile\controller\User->login_deal[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006163s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.054606s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'lucky'  AND `password` = 'lucky' LIMIT 1 [ RunTime:0.001871s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:41:32+08:00 ] 127.0.0.1 GET /index.php/mobile/pyq/index.html
+[ info ] www.friendscircle.net/index.php/mobile/pyq/index.html [运行时间：0.456834s][吞吐率：2.19req/s] [内存消耗：2,861.23kb] [文件加载：56]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'pyq',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\mobile\controller\Pyq->index[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\Pyq.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\pyq\index.html [ array (
+  0 => 'username',
+  1 => 'head',
+  2 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006340s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `item` [ RunTime:0.046433s ]
+[ sql ] [ SQL ] SELECT `i`.`id`,`i`.`content`,`i`.`time`,`u`.`head`,`u`.`username`,group_concat(imgs.href separator "|") imgs FROM `item` `i` LEFT JOIN `user` `u` ON `u`.`id`=`i`.`user_id` LEFT JOIN `imgs` ON `imgs`.`item_id`=`i`.`id` GROUP BY `i`.`id` ORDER BY i.id desc [ RunTime:0.039607s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comments` [ RunTime:0.048939s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 58 [ RunTime:0.001842s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `likes` [ RunTime:0.046113s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 58 [ RunTime:0.001918s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 58 [ RunTime:0.002174s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.001798s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.001657s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.001685s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 56 [ RunTime:0.001993s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 56 [ RunTime:0.001765s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 56 [ RunTime:0.001915s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.001778s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.001772s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.001685s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:41:37+08:00 ] 127.0.0.1 POST /index.php/mobile/pyq/remove.html
+[ info ] www.friendscircle.net/index.php/mobile/pyq/remove.html [运行时间：0.605674s][吞吐率：1.65req/s] [内存消耗：2,921.34kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'pyq',
+    2 => 'remove',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'content-length' => '10',
+  'accept' => '*/*',
+  'origin' => 'http://www.friendscircle.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/pyq/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+  'item_id' => '56',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\mobile\controller\Pyq->remove[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\Pyq.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007498s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `item` [ RunTime:0.067062s ]
+[ sql ] [ SQL ] DELETE FROM `item`    WHERE  `id` = 56 [ RunTime:0.021826s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `imgs` [ RunTime:0.058023s ]
+[ sql ] [ SQL ] DELETE FROM `imgs`    WHERE  `item_id` = 56 [ RunTime:0.001946s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comments` [ RunTime:0.047759s ]
+[ sql ] [ SQL ] DELETE FROM `comments`    WHERE  `item_id` = 56 [ RunTime:0.002025s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `likes` [ RunTime:0.083059s ]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL' at line 1[D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\library\think\db\Connection.php:456]
+---------------------------------------------------------------
+[ 2018-05-01T12:41:41+08:00 ] 127.0.0.1 GET /index.php/mobile/pyq/index.html
+[ info ] www.friendscircle.net/index.php/mobile/pyq/index.html [运行时间：0.510071s][吞吐率：1.96req/s] [内存消耗：2,851.03kb] [文件加载：56]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'pyq',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/user/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\mobile\controller\Pyq->index[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\Pyq.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\pyq\index.html [ array (
+  0 => 'username',
+  1 => 'head',
+  2 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006808s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `item` [ RunTime:0.056785s ]
+[ sql ] [ SQL ] SELECT `i`.`id`,`i`.`content`,`i`.`time`,`u`.`head`,`u`.`username`,group_concat(imgs.href separator "|") imgs FROM `item` `i` LEFT JOIN `user` `u` ON `u`.`id`=`i`.`user_id` LEFT JOIN `imgs` ON `imgs`.`item_id`=`i`.`id` GROUP BY `i`.`id` ORDER BY i.id desc [ RunTime:0.051932s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comments` [ RunTime:0.056316s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 58 [ RunTime:0.001949s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `likes` [ RunTime:0.049472s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 58 [ RunTime:0.001816s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 58 [ RunTime:0.001979s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.002002s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.001655s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.001704s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.002240s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.001830s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.001844s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:42:20+08:00 ] 127.0.0.1 GET /index.php/mobile/album/index.html
+[ info ] www.friendscircle.net/index.php/mobile/album/index.html [运行时间：0.450142s][吞吐率：2.22req/s] [内存消耗：2,874.68kb] [文件加载：56]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'album',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/pyq/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\mobile\controller\Album->index[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\Album.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\album\index.html [ array (
+  0 => 'username',
+  1 => 'head',
+  2 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006816s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `item` [ RunTime:0.058304s ]
+[ sql ] [ SQL ] SELECT `i`.`content`,`i`.`time`,group_concat(imgs.href separator "|") img FROM `item` `i` LEFT JOIN `imgs` ON `imgs`.`item_id`=`i`.`id` WHERE  `i`.`user_id` = 2 GROUP BY `i`.`id` ORDER BY i.id desc [ RunTime:0.024089s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:42:23+08:00 ] 127.0.0.1 GET /index.php/mobile/message/index.html
+[ info ] www.friendscircle.net/index.php/mobile/message/index.html [运行时间：0.439425s][吞吐率：2.28req/s] [内存消耗：2,911.70kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'message',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/album/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\mobile\controller\Message->index[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\Message.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\message\index.html [ array (
+  0 => 'username',
+  1 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006864s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comments` [ RunTime:0.056112s ]
+[ sql ] [ SQL ] SELECT `u`.`head`,`u`.`username`,`c`.`content`,`c`.`time`,`imgs`.`href` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `item` `i` ON `i`.`id`=`c`.`item_id` LEFT JOIN `imgs` ON `imgs`.`item_id`=`i`.`id` WHERE  `i`.`user_id` = 2 GROUP BY `c`.`id` [ RunTime:0.026999s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `likes` [ RunTime:0.046923s ]
+[ sql ] [ SQL ] SELECT `u`.`head`,`u`.`username`,`l`.`time`,`imgs`.`href` FROM `likes` `l` LEFT JOIN `user` `u` ON `u`.`id`=`l`.`user_id` LEFT JOIN `item` `i` ON `i`.`id`=`l`.`item_id` LEFT JOIN `imgs` ON `imgs`.`item_id`=`i`.`id` WHERE  `i`.`user_id` = 2 GROUP BY `l`.`id` [ RunTime:0.002643s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:42:26+08:00 ] 127.0.0.1 GET /index.php/mobile/album/index.html
+[ info ] www.friendscircle.net/index.php/mobile/album/index.html [运行时间：0.348782s][吞吐率：2.87req/s] [内存消耗：2,730.90kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'album',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/message/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\mobile\controller\Album->index[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\Album.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\album\index.html [ array (
+  0 => 'username',
+  1 => 'head',
+  2 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008383s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `item` [ RunTime:0.073768s ]
+[ sql ] [ SQL ] SELECT `i`.`content`,`i`.`time`,group_concat(imgs.href separator "|") img FROM `item` `i` LEFT JOIN `imgs` ON `imgs`.`item_id`=`i`.`id` WHERE  `i`.`user_id` = 2 GROUP BY `i`.`id` ORDER BY i.id desc [ RunTime:0.026949s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:42:27+08:00 ] 127.0.0.1 GET /index.php/mobile/pyq/index.html
+[ info ] www.friendscircle.net/index.php/mobile/pyq/index.html [运行时间：0.565222s][吞吐率：1.77req/s] [内存消耗：2,850.95kb] [文件加载：56]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'pyq',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/album/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\mobile\controller\Pyq->index[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\Pyq.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\pyq\index.html [ array (
+  0 => 'username',
+  1 => 'head',
+  2 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007376s ] mysql:host=127.0.0.1;dbname=pyq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `item` [ RunTime:0.076570s ]
+[ sql ] [ SQL ] SELECT `i`.`id`,`i`.`content`,`i`.`time`,`u`.`head`,`u`.`username`,group_concat(imgs.href separator "|") imgs FROM `item` `i` LEFT JOIN `user` `u` ON `u`.`id`=`i`.`user_id` LEFT JOIN `imgs` ON `imgs`.`item_id`=`i`.`id` GROUP BY `i`.`id` ORDER BY i.id desc [ RunTime:0.050003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comments` [ RunTime:0.055960s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 58 [ RunTime:0.001859s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `likes` [ RunTime:0.049029s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 58 [ RunTime:0.001813s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 58 [ RunTime:0.001494s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.002133s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.002222s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 57 [ RunTime:0.001809s ]
+[ sql ] [ SQL ] SELECT `c`.`content`,`u`.`username` FROM `comments` `c` LEFT JOIN `user` `u` ON `u`.`id`=`c`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.001828s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.001731s ]
+[ sql ] [ SQL ] SELECT `user`.`username` FROM `likes` LEFT JOIN `user` ON `user`.`id`=`likes`.`user_id` WHERE  `item_id` = 55 [ RunTime:0.002010s ]
+---------------------------------------------------------------
+[ 2018-05-01T12:42:42+08:00 ] 127.0.0.1 GET /index.php/mobile/user/logout.html
+[ info ] www.friendscircle.net/index.php/mobile/user/logout.html [运行时间：0.216667s][吞吐率：4.62req/s] [内存消耗：1,671.90kb] [文件加载：45]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/pyq/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\mobile\controller\User->logout[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-01T12:42:42+08:00 ] 127.0.0.1 GET /index.php/mobile/user/main.html
+[ info ] www.friendscircle.net/index.php/mobile/user/main.html [运行时间：0.175451s][吞吐率：5.70req/s] [内存消耗：1,652.90kb] [文件加载：44]
+[ info ] [ LANG ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'user',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.friendscircle.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.friendscircle.net/index.php/mobile/pyq/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9583601664; PHPSESSID=jmc00ht78r0ke41063c55bhkk6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\mobile\controller\User->main[ D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\application\mobile\controller\User.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\WeChatFriendsCircle\FriendsCircle\public/../application/mobile\view\user\main.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
