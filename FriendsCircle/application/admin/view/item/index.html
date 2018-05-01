@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+
+    <title> hAdmin- 主页</title>
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="__STATIC__/admin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="__STATIC__/admin/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="__STATIC__/admin/css/animate.css" rel="stylesheet">
+    <link href="__STATIC__/admin/css/style.css?v=4.1.0" rel="stylesheet">
+</head>
+<body>
+    <div class="ibox float-e-margins" style="width: 90%;margin: 0 auto;margin-top: 20px;">
+        <div class="ibox-content">
+            <form role="form" class="form-inline" action="{:url('admin/user/index')}" method="post">
+                <div class="form-group">
+                    <label for="exampleInputEmail2" class="sr-only">用户名</label>
+                    <input placeholder="请输入关键字" class="form-control" name="key">
+                </div>
+                <button class="btn btn-white" type="submit" style="margin-bottom:0;">查找</button>
+            </form>
+        </div>
+    </div>
+    <div class="ibox float-e-margins" style="width: 90%;margin: 0 auto;margin-top: 20px;">
+        <div class="ibox-title">
+            <h5>基本</h5>
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="table_basic.html#">
+                    <i class="fa fa-wrench"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li><a href="table_basic.html#">选项1</a>
+                    </li>
+                    <li><a href="table_basic.html#">选项2</a>
+                    </li>
+                </ul>
+                <a class="close-link">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+        </div>
+        <div class="ibox-content">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#id</th>
+                        <th>发布人</th>
+                        <th>发布人头像</th>
+                        <th>发布时间</th>
+                        <th>内容</th>
+                        <th>图片</th>
+                        <th>删除</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {foreach $items as $item} 
+                    <tr>
+                        <td>{$item['id']}</td>
+                        <td>{$item['username']}</td>
+                        <td><img src="__STATIC__/head/{$item['head']}"  style="width:60px;height:60px;"></td>
+                        <td>{$item['time']}</td>
+                        <td>{$item['content']}</td>
+                        <td>
+                            {foreach $item['imgs'] as $imgs}
+                            <img src="__STATIC__/upload/{$imgs}" style="width:60px;height:60px;">
+                            {/foreach}
+                        </td>
+                        <td><a href="{:url('admin/item/remove')}?id={$item['id']}" class="btn btn-primary " type="button"><i class="fa fa-check"></i>&nbsp;删除</a></td>
+                    </tr>
+                    {/foreach}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="__STATIC__/admin/js/jquery.min.js?v=2.1.4"></script>
+    <script src="__STATIC__/admin/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="__STATIC__/admin/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="__STATIC__/admin/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="__STATIC__/admin/js/plugins/layer/layer.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="__STATIC__/admin/js/hAdmin.js?v=4.1.0"></script>
+    <script type="text/javascript" src="__STATIC__/admin/js/index.js"></script>
+
+    <!-- 第三方插件 -->
+    <script src="__STATIC__/admin/js/plugins/pace/pace.min.js"></script>
+</body>
+</html>

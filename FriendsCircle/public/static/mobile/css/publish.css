@@ -1,0 +1,142 @@
+*{
+	padding:0;
+	margin:0;
+}
+body{
+	width:100%;
+	height:100%;
+	background-color:rgb(235,235,235);
+}
+html{
+	padding-top:50px;
+}
+/*Iconfont图标的通用css代码*/
+.icon{
+	width: 1em; height: 1em;
+   	vertical-align: -0.15em;
+   	fill: currentColor;
+   	overflow: hidden;
+}
+.header{
+	width:100%;
+	height: 50px;
+	position:fixed;
+	z-index: 9998;
+	top:0px;
+	left:0px;
+	background-color: rgb(55,59,62);
+	color:white;
+}
+.last{
+	float: left;
+    height: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 21px;
+}
+.header_line{
+	float: left;
+	width:1px;
+	height:28px;
+	margin-top:11px;
+	background-color: rgb(45,46,50);
+}
+.button{
+	float: right;
+    background-color: rgb(25,173,23);
+    border: 0;
+    border-radius: 3px;
+    padding: 6px 18px;
+    margin-top: 8px;
+    margin-right: 8px;
+}
+textarea{
+	display: block;
+    resize: none;
+    width: 100%;
+    height: 110px;
+    font-size: 18px;
+    border:0;
+    padding:5px 15px;
+    outline:none;
+    overflow: hidden;
+}
+.picture_box{
+	padding:10px 15px;
+	overflow:hidden;
+	background-color:white;
+}
+.picture{
+	float: left;
+    width: 66px;
+    height: 66px;
+    line-height: 66px;
+    border: 1px solid rgb(222,222,222);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 40px;
+    color:rgb(222,222,222);
+}
+.picture>img{
+	display:block;
+	width:100%;
+	height: 100%;
+}
+.content{
+	width:100%;
+	height:55px;
+	line-height: 55px;
+	background-color:white;
+}
+.content>svg{
+	float:left;
+	margin-left: 15px;
+    font-size: 28px;
+    color: rgb(222,222,222);
+    height:55px;
+}
+.txt{
+	float: left;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.limit{
+	margin-top: 35px;
+	border-bottom: 1px solid rgb(222,222,222);
+}
+.public{
+	float:right;
+	margin-right:20px;
+	font-size:1.3rem;\
+	color:rgb(150,150,150);
+}
+.zone{
+	float:left;
+	margin-left: 10px;
+	margin-top: 17px;
+    font-size: 28px;
+    color: rgb(222,222,222);
+}
+.zone_color{
+	color:rgb(255,192,0);
+}
+.watch{
+	display:none;
+	width:100%;
+	height: 100%;
+	position:fixed;
+	background-color:rgb(0,0,0);
+	top:0px;
+	left:0px;
+	z-index: 9999;
+}
+.watch>img{
+	margin: auto;  
+  	position: absolute; 
+  	width:100%; 
+  	top: 0; 
+  	left: 0; 
+  	bottom: 0; 
+  	right: 0;
+}

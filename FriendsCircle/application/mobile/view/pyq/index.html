@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- 网页制作者信息 -->
+	<meta name="author" content="1101546926@qq.com">
+	<!-- 网站简介 -->
+	<meta name="description" content="Imitate WeChat friend circle.">
+	<!-- 搜索关键字 -->
+	<meta name="keywords" content="wechat,friends,circle">
+	<!-- 自动适应屏幕宽度 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<!-- 引入font-awesome.min.css -->
+	<link rel="stylesheet" type="text/css" href="__STATIC__/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!-- 引入bootstrap.min.css -->
+	<link rel="stylesheet" type="text/css" href="__STATIC__/bootstrap/css/bootstrap.min.css">
+	<!-- 引入自定义css -->
+	<link rel="stylesheet" type="text/css" href="__STATIC__/mobile/css/index.css">
+	<!-- 引入IconFont 图标生成的symbol代码 -->
+	<script src="__STATIC__/mobile/Iconfont/iconfont.js"></script>
+	<title>朋友圈</title>
+</head>
+<body>
+	<div class="header">
+		<svg class="icon last" aria-hidden="true">
+		  	<use xlink:href="#icon-xitongfanhui"></use>
+		</svg>
+		<div class="header_line"></div>
+		<div class="title">朋友圈</div>
+		<svg class="icon camera" aria-hidden="true">
+		  	<use xlink:href="#icon-xiangji" data-toggle="modal" data-target="#myModal"></use>
+		</svg>
+		<div sytle="clear:both;"></div>
+	</div>
+	<div class="model">
+		<img src="__STATIC__/mobile/images/cover.jpg" data-toggle="modal" data-target="#myModal_1">
+		<span class="user_name">{$username}</span>
+		<a href="{:url('mobile/album/index')}">
+			<div class="picture">
+				<img src="__STATIC__/mobile/images/head/{$head}" class="user_head">
+			</div>
+		</a>
+	</div>
+	<div class="container">
+		<ul class="content_list">
+			{notempty name="$data"}
+				{foreach $data as $info} 
+				    <li>
+							<p class="id" style="display: none;">{$info['id']}</p>
+							<div class="friend_picture">
+								<img src="__STATIC__/mobile/images/head/{$info['head']}">
+							</div>
+							<div class="content">
+								<div class="mine">
+									<p class="friend_name">{$info['username']}</p>
+									<p class="say">{$info['content']}</p>
+									<div class="photo_box">
+										{if condition="count($info['imgs']) eq 1"} 
+											<img src="__STATIC__/upload/{$info['imgs'][0]}" class="img_size_3">
+										{elseif condition="count($info['imgs']) gt 1" /}
+											{for start="0" end="count($info['imgs'])"}
+												<img src="__STATIC__/upload/{$info['imgs'][$i]}" class="img_size_1">
+											{/for}
+										{/if}
+										<div sytle="clear:both;"></div>
+									</div>
+									<div sytle="clear:both;"></div>
+									<div class="detials">
+										<span class="time">
+											{$info['time_difference']}
+										</span>
+										<span class="delete">
+											{if condition="$info['username'] eq $username"}
+												删除
+											{/if}
+										</span>
+										<div class="menu">
+											<div class="like">
+												<svg class="icon" aria-hidden="true">
+												  	<use xlink:href="#icon-heartline"></use>
+												</svg>
+												{notempty name="$info['likes']"}
+													{foreach $info['likes'] as $value} 
+													    {if condition="$value['username'] eq $username"}
+													    	{assign name="flag" value="1"/}
+														{/if}
+													{/foreach}
+												{/notempty}
+												{present name="$flag"}
+													<span>取消</span>
+												{else /}
+													<span>赞</span>
+												{/present}
+											</div>
+											<div class="write">
+												<svg class="icon" aria-hidden="true">
+												  	<use xlink:href="#icon-comment"></use>
+												</svg>
+												<span>评论</span>
+											</div>
+										</div>
+										<svg class="icon comment" aria-hidden="true">
+										  	<use xlink:href="#icon-pinglun"></use>
+										</svg>
+									</div>
+									{if condition="!empty($info['likes']) OR !empty($info['comments'])"} 
+										<div class="triangle"></div>
+									{/if}	
+									<div class="clear:both;"></div>
+								</div>
+								<div class="dialog">
+									<div class="dialog_box">
+										<p class="like_person">
+											{notempty name="$info['likes']"}
+												<i class="fa fa-heart-o heart"></i>
+												{foreach $info['likes'] as $value} 
+												    <span class="me" style="color:rgb(87,107,149);">&nbsp;{$value['username']}</span>
+												{/foreach}
+											{/notempty}
+										</p>
+										{if condition="isset($info['comments'])"}
+											{foreach $info['comments'] as $value}
+												<p style="width:100%;"><span style="color:rgb(87,107,149);margin-left:7px;">{$value['username']}:</span>{$value['content']}</p>
+											{/foreach}
+										{/if}
+									</div>
+								</div>
+							</div>
+							<div class="clear:both;"></div>
+						</li>
+				{/foreach}
+			{/notempty}
+		</ul>
+	</div>
+	<div class="watch">
+		<img src="" class="img">
+	</div>
+	<div class="pinglun">
+		<input type="text" class="talk" id="talk">
+		<svg class="icon emoji" aria-hidden="true">
+		  	<use xlink:href="#icon-xiaolian"></use>
+		</svg>
+		<button class="send">发送</button>
+	</div>
+
+	<!-- Modal camera-->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="padding-top:250px;z-index:9998;">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content"  style="overflow: hidden;">
+	        <div class="modal-header">
+	            <h4 class="modal-title select">从相册中选择</h4>
+	        </div>
+	        <a href="{:url('mobile/user/logout')}">
+		        <div class="modal-header">
+		            <h4 class="modal-title" id="myModalLabel">退出登录</h4>
+		        </div>
+	        </a>
+	    </div>
+	  </div>
+	</div>
+	<!-- Model cover -->
+	<div class="modal fade" id="myModal_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" style="padding-top:250px;z-index:9999;">
+	  <div class="modal-dialog" role="document" style="margin-left:30px;margin-right:30px;">
+	    <div class="modal-content"  style="overflow:hidden;border-radius:3px;">
+	      <div class="modal-header" style="padding-left: 20px;">
+	        <h4 style="float:left;" class="modal-title" id="myModalLabel1">更换相册封面</h4>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- 引入jquery.min.js -->
+	<script type="text/javascript" src="__STATIC__/bootstrap/js/jquery.min.js"></script>
+	<!-- 引入bootstrap.min.js -->
+	<script type="text/javascript" src="__STATIC__/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		var commentTarget;
+		// 点赞、评论弹出框
+		$(".comment").click(function(){
+			var obj = $(this).parent().find(".menu")
+			if(obj.is(":hidden")){
+				obj.css("width","0")
+				obj.show()
+				obj.animate({
+					"width":"160px"
+				},200)
+			}else{
+				obj.hide()
+			}
+		})
+		//点赞或取消赞
+		$(".like").click(function(){
+			var obj = $(this).parents('li')
+			obj.find(".menu").hide()
+			var id = obj.find(".id").html()
+			var me = obj.find(".me");
+			var username = $(".user_name").html()
+			if($(this).find("span").html() == "赞"){
+				//Ajax提交数据
+				$.post("{:url('mobile/pyq/like')}",{flag:1,item_id:id})
+				if(!(me.length>0)){
+					obj.find(".like_person").prepend('<i class="fa fa-heart-o heart"></i>')
+				}
+				obj.find(".like_person").append('<span class="me" style="color:rgb(87,107,149);">&nbsp;'+username+'</span>')
+				//显示triangle
+				if(!(obj.find(".triangle").length)){
+					obj.find(".mine").append('<div class="triangle"></div>')
+				}
+				$(this).find("span").html("取消")
+			}else{
+				$.post("{:url('mobile/pyq/like')}",{flag:0,item_id:id})
+				if(me.length==1){
+					obj.find(".heart").remove()
+					//删除triangle
+					if(obj.find(".triangle").length>0){
+						obj.find(".triangle").remove()
+					}
+				}
+				me.each(function(){
+					var str = '&nbsp;'+username;
+					if($(this).html()==str){
+						$(this).remove()
+					}
+				})
+				$(this).find("span").html("赞")
+			}	
+		})
+		//评论
+		$(".write").click(function(){
+			commentTarget = $(this).parents("li")
+			$(this).parents("li").find(".menu").hide()
+			$(".pinglun").show()
+			document.getElementById("talk").focus()
+		})
+		//发送评论
+		$(".send").click(function(){
+			var id = commentTarget.find(".id").html()
+			var username = $(".user_name").html()
+			$(".pinglun").hide()
+			//显示triangle
+			if(!(commentTarget.find(".triangle").length)){
+				commentTarget.find(".mine").append('<div class="triangle"></div>')
+			}
+			if($(".talk").val()!=''){
+				var say = $(".talk").val()
+				var str = '<p style="width:100%;">'+'<span style="color:rgb(87,107,149);margin-left:7px;">'+username+':</span>' + $(".talk").val() +'</p>'
+				//Ajax提交数据
+				$.post("{:url('mobile/pyq/comment')}",{item_id:id,comment:say},function(data){
+					console.log(data);
+				})
+				commentTarget.find(".dialog_box").append(str)
+				$(".talk").val("")
+			}
+		})
+		//全屏显示
+		$(".photo_box img").click(function(){
+			$(".watch").children().attr("src",$(this).attr("src"))
+			$(".watch").show()
+			$(".watch>img").hide()
+			$(".watch>img").fadeIn()
+		})
+		$(".watch").click(function(){
+			$(this).hide()
+		})
+		//在相册中个选择图片
+		$('.select').click(function(){
+			window.location.href = "{:url('mobile/publish/index')}";
+		})
+		//点击头像
+		$('.friend_picture').click(function(){
+			var name = $(this).parents("li").find(".friend_name").html()
+			window.location.href = "{:url('mobile/detail/index')}?name="+name;
+		})
+		//删除朋友圈
+		$(".delete").click(function(){
+			var item_id = $(this).parents("li").find(".id").html()
+			$.post("{:url('mobile/pyq/remove')}",{item_id:item_id},function(data){
+				console.log(data);
+			})
+			$(this).parents("li").remove()
+		})
+		//点击其他地方，隐藏menu,pinglun
+		$("body").click(function(e){
+			var flag1 = $(e.target).is(".comment,.comment *")
+			var flag2 = $(e.target).is(".menu,.menu *")
+			var flag3 = $(e.target).is(".write,.write *")
+			var flag4 = $(e.target).is(".pinglun,.pinglun *")
+			if(!flag1 && !flag2 && !flag3 && !flag4){
+				$(".menu").hide()
+				$(".pinglun").hide()
+			}
+		})
+		//回车发送消息
+		$(".talk").keypress(function(e){
+			if(e.keyCode==13){
+				$(".send").click()
+			}
+		})
+	</script>
+</body>
+</html>

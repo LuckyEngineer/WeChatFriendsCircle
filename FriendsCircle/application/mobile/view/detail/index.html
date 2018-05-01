@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<!-- 引入font-awesome.min.css -->
+	<link rel="stylesheet" type="text/css" href="__STATIC__/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!-- 引入bootstrap.min.css -->
+	<link rel="stylesheet" type="text/css" href="__STATIC__/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__STATIC__/mobile/css/detail.css">
+	<!-- 引入IconFont 图标生成的symbol代码 -->
+	<script src="__STATIC__/mobile/Iconfont/iconfont.js"></script>
+	<title>详细资料</title>
+</head>
+<body>
+	<div class="header">
+		<a href="{:url('mobile/pyq/index')}">
+			<svg class="icon last" aria-hidden="true">
+			  	<use xlink:href="#icon-xitongfanhui"></use>
+			</svg>
+		</a>
+		<div class="header_line"></div>
+		<div class="title">详细资料</div>
+		<svg class="icon items" aria-hidden="true" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+		  	<use xlink:href="#icon-sangedian-type-1"></use>
+		</svg>
+		<div sytle="clear:both;"></div>
+	</div>
+	<div class="information">
+		<div>
+			<img src="__STATIC__/mobile/images/head/{$data['head']}">
+		</div>
+		<div>
+			<div class="name">
+				{$data['username']}
+				<svg class="icon" aria-hidden="true">
+				  	<use xlink:href="#icon-man"></use>
+				</svg>
+			</div>
+			<div>微信号：wxid_51vewgakx30t22</div>
+			<div>昵称：{$data['username']}</div>
+		</div>
+	</div>
+	<div class="content telephone">
+		<span class="tab">电话号码</span>
+		<span class="txt">{$data['telephone']}</span>
+	</div>
+	<div class="content">
+		<span class="tab">标签</span>
+		<span class="txt">全部人</span>
+	</div>
+	<div class="content position">
+		<span class="tab">地区</span>
+		<span class="txt">{$data['area']}</span>
+	</div>
+	<div class="album">
+		<span class="tab">个人相册</span>
+		<div class="album_box">
+			{if condition="count($href) eq 1"} 
+				<img src="__STATIC__/upload/{$href[0]}">
+			{elseif condition="count($href) eq 2"/}
+				<img src="__STATIC__/upload/{$href[0]}">
+				<img src="__STATIC__/upload/{$href[1]}">
+			{elseif condition="count($href) egt 3"/}
+				<img src="__STATIC__/upload/{$href[0]}">
+				<img src="__STATIC__/upload/{$href[1]}">
+				<img src="__STATIC__/upload/{$href[2]}">
+			{/if}
+		</div>
+	</div>
+	<div class="content">
+		<span class="tab">更多</span>
+	</div>
+	<button class="sent">发消息</button>
+	<button class="chat">视频聊天</button>
+	<!-- Modal -->
+	<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog menu" role="document">
+	    <div class="modal-content menu_content">
+	      <div class="modal-body option">
+			<svg class="icon" aria-hidden="true">
+			  	<use xlink:href="#icon-beizhu"></use>
+			</svg>
+			<span class="option_txt">设置备注及标签</span>
+	      </div>
+	      <div class="modal-body option">
+	        <svg class="icon" aria-hidden="true">
+			  	<use xlink:href="#icon-xing"></use>
+			</svg>
+			<span class="option_txt">标为星标朋友</span>
+	      </div>
+	      <div class="modal-body option">
+	        <svg class="icon" aria-hidden="true">
+			  	<use xlink:href="#icon-pengyouquan"></use>
+			</svg>
+			<span class="option_txt">设置朋友圈权限</span>
+	      </div>
+	      <div class="modal-body option">
+	        <svg class="icon" aria-hidden="true">
+			  	<use xlink:href="#icon-zhaosheng-zhuanfa"></use>
+			</svg>
+			<span class="option_txt">发送该名片</span>
+	      </div>
+	      <div class="modal-body option">
+	        <svg class="icon" aria-hidden="true">
+			  	<use xlink:href="#icon-jinggao"></use>
+			</svg>
+			<span class="option_txt">投诉</span>
+	      </div>
+	      <div class="modal-body option">
+	        <svg class="icon" aria-hidden="true">
+			  	<use xlink:href="#icon-heimingdan"></use>
+			</svg>
+			<span class="option_txt">加入黑名单</span>
+	      </div>
+	      <div class="modal-body option">
+	        <svg class="icon" aria-hidden="true">
+			  	<use xlink:href="#icon-icondel"></use>
+			</svg>
+			<span class="option_txt">删除</span>
+	      </div>
+	      <div class="modal-body option">
+	        <svg class="icon" aria-hidden="true">
+			  	<use xlink:href="#icon-copy2"></use>
+			</svg>
+			<span class="option_txt">添加到桌面</span>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="watch">
+		<img src="" class="img">
+	</div>
+	<!-- 引入jquery.min.js -->
+	<script type="text/javascript" src="__STATIC__/bootstrap/js/jquery.min.js"></script>
+	<!-- 引入bootstrap.min.js -->
+	<script type="text/javascript" src="__STATIC__/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(".items").click(function(){
+    		$(".menu").animate({
+    			"bottom":0
+    		},500)
+    	})
+    	$(".modal").click(function(e){
+    		var flag = $(e.target).hasClass("modal")
+    		if(flag){
+    			$(".menu").css("bottom","-300px")
+    		}
+    	})
+    	//全屏显示
+		$(".information img").click(function(){
+			$(".watch").children().attr("src",$(this).attr("src"))
+			$(".watch").show()
+			$(".watch>img").hide()
+			$(".watch>img").fadeIn()
+		})
+		$(".watch").click(function(){
+			$(this).hide()
+		})
+	</script>
+</body>
+</html>

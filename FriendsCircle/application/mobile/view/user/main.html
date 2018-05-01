@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>main</title>
+	<link rel="stylesheet" type="text/css" href="__STATIC__/mobile/css/main.css">
+</head>
+<body>
+	<span class="language">语言</span>
+	<button class="btn login">登录</button>
+	<button class="btn register">注册</button>
+	<script type="text/javascript" src="__STATIC__/bootstrap/js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$('.login').click(function(){
+			window.location.href = "{:url('mobile/user/login')}"
+		})
+		$('.register').click(function(){
+			window.location.href = "{:url('mobile/user/register')}"
+		})
+	</script>
+</body>
+</html>

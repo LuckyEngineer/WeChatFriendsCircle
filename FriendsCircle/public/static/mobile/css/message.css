@@ -1,0 +1,115 @@
+*{
+	padding:0;
+	margin:0;
+}
+body{
+	width:100%;
+	height:100%;
+	background-color:rgb(235,235,235); 
+}
+html{
+	padding-top:50px;
+}
+/*Iconfont图标的通用css代码*/
+.icon{
+	width: 1em; height: 1em;
+   	vertical-align: -0.15em;
+   	fill: currentColor;
+   	overflow: hidden;
+}
+.header{
+	width:100%;
+	height: 50px;
+	position:fixed;
+	z-index: 9998;
+	top:0px;
+	left:0px;
+	background-color: rgb(55,59,62);
+	color:white;
+}
+.header span{
+	float:right;
+	margin-right: 15px;
+	height:50px;
+	line-height: 50px;
+}
+a{
+	color:white;
+}
+a:visited{
+	color:white;
+}
+.last{
+	float: left;
+    height: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 21px;
+}
+.header_line{
+	float: left;
+	width:1px;
+	height:28px;
+	margin-top:11px;
+	background-color: rgb(45,46,50);
+}
+.title{
+	margin-left: 10px;
+	height:50px;
+	float:left;
+	font-size:20px;
+	line-height: 50px;
+}
+.container{
+	position:relative;
+	width:100%;
+	height:90px;
+	padding:10px 90px 0 75px;
+	background-color:white;
+	border-top:1px solid rgb(235,235,235);
+}
+.container>:first-child{
+	position:absolute;
+	width:55px;
+	height: 55px;
+    left:10px;
+	top:10px;
+}
+.container>:last-child{
+	position:absolute;
+	width:70px;
+	height: 70px;
+    right:10px;
+	top:10px;
+}
+.name{
+	color:rgb(87,107,149);
+}
+.comment{
+	color:black;
+}
+.heart{
+	color:rgb(87,107,149);
+}
+.time{
+	font-size:0.9rem;
+}
+.watch{
+	display:none;
+	width:100%;
+	height: 100%;
+	position:fixed;
+	background-color:rgb(0,0,0);
+	top:0px;
+	left:0px;
+	z-index: 9999;
+}
+.watch>img{
+	margin: auto;  
+  	position: absolute; 
+  	width:100%; 
+  	top: 0; 
+  	left: 0; 
+  	bottom: 0; 
+  	right: 0;
+}

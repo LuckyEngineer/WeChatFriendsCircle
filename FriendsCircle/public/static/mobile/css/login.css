@@ -1,0 +1,124 @@
+*{
+	padding:0;
+	margin:0;
+}
+body{
+	width:100%;
+	height:100%;
+	text-align: center;
+}
+html{
+	padding-top:50px;
+}
+/*Iconfont图标的通用css代码*/
+.icon{
+	width: 1em; height: 1em;
+   	vertical-align: -0.15em;
+   	fill: currentColor;
+   	overflow: hidden;
+}
+.header{
+	width:100%;
+	height: 50px;
+	position:fixed;
+	z-index: 9998;
+	top:0px;
+	left:0px;
+	background-color: rgb(55,59,62);
+	color:white;
+}
+.last{
+	float: left;
+    height: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 21px;
+}
+.header_line{
+	float: left;
+	width:1px;
+	height:28px;
+	margin-top:11px;
+	background-color: rgb(45,46,50);
+}
+.title{
+	margin-left: 10px;
+	height:50px;
+	float:left;
+	font-size:20px;
+	line-height: 50px;
+}
+.head_box{
+	position: relative;
+	margin:60px auto;
+	width:100px;
+	height:100px;
+	background-color:rgb(221,221,221);
+}
+.head_box img{
+	display:none;
+	width:100%;
+	height:100%;
+}
+.camera{
+	width:100%;
+	height: 100%;
+    line-height: 90px;
+    text-align: center;
+    font-size: 70px;
+    color:white;
+}
+.triangle_1{
+	position: absolute;
+	bottom:0;
+	right:0;
+	width: 0;
+	height: 0;
+	border-width: 12px 12px 12px 12px;
+	border-style: solid;
+	border-color: transparent white white transparent;
+}
+.triangle_2{
+	position: absolute;
+	bottom:0;
+	right:0;
+	width: 0;
+	height: 0;
+	border-width: 10px 10px 10px 10px;
+	border-style: solid;
+	border-color: transparent rgb(170,170,170) rgb(170,170,170) transparent;
+}
+.inp{
+	display: block;
+    margin: 0 auto;
+    width:90%;
+    padding: 15px 10px 15px 10px;
+    border: 0;
+    border-bottom: 1px solid rgb(26,173,25);
+    outline: none;
+    font-size: 18px;
+}
+.login{
+	display: block;
+	width:95%;
+	margin:30px auto;
+	margin-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: rgb(26,173,25);
+	border:0;
+	border-radius: 3px;
+	color:white;
+	font-size: 18px;
+}
+a{
+	text-align: center;
+    text-decoration: none;
+    color:rgb(88,108,149);
+}
+.question:visited{
+	color:rgb(88,108,149);
+}
+.question:active{
+	color:rgb(88,108,149);
+}

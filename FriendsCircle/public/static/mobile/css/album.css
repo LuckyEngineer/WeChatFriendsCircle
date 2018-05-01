@@ -1,0 +1,161 @@
+*{
+	padding:0;
+	margin:0;
+}
+body{
+	width:100%;
+	height:100%;
+}
+html{
+	padding-top:50px;
+}
+/*Iconfont图标的通用css代码*/
+.icon{
+	width: 1em; height: 1em;
+   	vertical-align: -0.15em;
+   	fill: currentColor;
+   	overflow: hidden;
+}
+.header{
+	width:100%;
+	height: 50px;
+	position:fixed;
+	z-index: 9998;
+	top:0px;
+	left:0px;
+	background-color: rgb(55,59,62);
+	color:white;
+}
+.last{
+	float: left;
+    height: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 21px;
+}
+.header_line{
+	float: left;
+	width:1px;
+	height:28px;
+	margin-top:11px;
+	background-color: rgb(45,46,50);
+}
+.title{
+	margin-left: 10px;
+	height:50px;
+	float:left;
+	font-size:20px;
+	line-height: 50px;
+}
+a{
+	color:white;
+}
+a:visited{
+	color:white;
+}
+.comment{
+	float: right;
+    height: 50px;
+    font-size: 35px;
+    margin-right: 10px;
+}
+.model{
+	position:relative;
+	width:100%;
+	height:260px;
+}
+.model>img{
+	width:100%;
+	height: 260px;
+}
+.user_name{
+	position:absolute;
+	color:white;
+	font-size:17px;
+	bottom:15px;
+	right:110px;
+}
+.picture{
+	position:absolute;
+	width:90px;
+	height:90px;
+	right:10px;
+	bottom:-35px;
+	border:1px solid white;
+}
+.user_head{
+	width:100%;
+	height:100%;
+}
+.p{
+	float:right;
+	margin-top:40px;
+	margin-right:10px;
+	width:220px;
+	text-align: right;
+	font-size:0.9rem;
+}
+.content{
+	list-style: none;
+	margin-top:80px;
+	width:100%;
+}
+.content li{
+	position:relative;
+	width: 100%;
+	height: 100px;
+	padding-left:85px;
+	padding-right:10px;
+}
+.time{
+	position:absolute;
+	top:0;
+	left:10px;
+	width:65px;
+	font-weight: bold;
+}
+.date{
+	font-size:28px;
+}
+.position{
+	position:absolute;
+	top:40px;
+	left:10px;
+	width:65px;
+}
+.picture_box{
+	float:left;
+	width:80px;
+	height: 80px;
+}
+.now{
+	background-color:gray;
+	font-size:60px;
+	color:white;
+	text-align: center;
+}
+/*四张或四张以上图片*/
+.box1>img{
+	width:38px;
+	height:38px;
+	margin-right:2px;
+	margin-top:2px;
+	float:left;
+}
+/*一张图片*/
+.box2>img{
+	width:100%;
+	height:100%;
+}
+/*两张或三张图片*/
+.box3>img{
+	width:38px;
+	height: 80px;
+	margin-right:2px;
+	float:left;
+}
+.description{
+	float: left;
+    width: 60%;
+    margin-left:5px;
+}

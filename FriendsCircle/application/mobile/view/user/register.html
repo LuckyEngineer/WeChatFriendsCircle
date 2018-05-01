@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<!-- 引入bootstrap.min.css -->
+	<link rel="stylesheet" type="text/css" href="__STATIC__/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__STATIC__/mobile/css/register.css">
+	<!-- 引入IconFont 图标生成的symbol代码 -->
+	<script src="__STATIC__/mobile/Iconfont/iconfont.js"></script>
+	<title>微信注册</title>
+</head>
+<body>
+	<div class="header">
+		<svg class="icon last" aria-hidden="true">
+		  	<use xlink:href="#icon-xitongfanhui"></use>
+		</svg>
+		<div class="header_line"></div>
+		<div class="title">注册微信</div>
+		<div sytle="clear:both;"></div>
+	</div>
+	<form action="{:url('mobile/user/register_deal')}" method="post" enctype="multipart/form-data">
+		<div class="box">
+			<div class="box_left">
+				<input type="text" name="username" class="user" placeholder="昵称">
+			</div>
+			<div class="box_right">
+				<div class="head_box">
+					<img src="">
+					<div class="camera">
+						<svg class="icon" aria-hidden="true">
+						  	<use xlink:href="#icon-xiangji"></use>
+						</svg>
+						<div class="triangle_1"></div>
+						<div class="triangle_2"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<input type="text" name="area" class="inp" placeholder="国家/地区">
+		<input type="text" name="tel" class="inp" placeholder="手机号">
+		<input type="password" name="password" class="inp" placeholder="密码">
+		<input type="file" name="file" class="head">
+		<button class="register">注册</button>
+	</form>
+	<!-- 引入jquery.min.js -->
+	<script type="text/javascript" src="__STATIC__/bootstrap/js/jquery.min.js"></script>
+	<script type="text/javascript">
+		function localView(from) {
+		    var file = from.files[0]
+		    var url = null ;
+		    if (window.createObjectURL!=undefined) { 
+		        url = window.createObjectURL(file) ;
+		    } else if (window.URL!=undefined) {
+		        url = window.URL.createObjectURL(file) ;
+		    } else if (window.webkitURL!=undefined) { 
+		        url = window.webkitURL.createObjectURL(file) ;
+		    }
+		    return url
+		}
+		$('.camera').click(function(){
+			$('input[name=file]').click()
+		})
+		$('.head').change(function(){
+			var src = localView(this)
+			$(".camera").hide()
+			$(".head_box>img").attr("src",src)
+			$(".head_box>img").show()
+		})
+		$('.last').click(function(){
+			window.location.href = './main.html'
+		})
+		$('.user').focus(function(){
+			$(this).css("border-bottom","1px solid rgb(69,192,26)")
+		})
+		$('.user').blur(function(){
+			$(this).css("border-bottom","1px solid rgb(217,217,217)")
+		})
+		$('.inp').focus(function(){
+			$(this).css("border-bottom","1px solid rgb(69,192,26)")
+		})
+		$('.inp').blur(function(){
+			$(this).css("border-bottom","1px solid rgb(217,217,217)")
+		})
+	</script>
+
+</body>
+</html>

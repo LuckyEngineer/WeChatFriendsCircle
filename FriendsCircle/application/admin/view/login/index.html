@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/login.css">
+	<title>login</title>
+</head>
+<body>
+	<div class="box">
+		<div class="font mar">登录：</div>
+		<div class="font mar">登录到H+后台主题UI框架</div>
+		<form action="{:url('admin/login/login_deal')}" method="post">
+			<div>
+				<input class="mar inp" type="text" name="username" placeholder="用户名">
+			</div>
+			<div>
+				<input class="mar inp" type="password" name="password" placeholder="密码">
+			</div>
+			<a href="#" class="mar">忘记密码了?</a>
+			<button class="btn">登录</button>
+		</form>
+	</div>
+	<div class="line"></div>
+	<div class="footer font">@hAdmin</div>
+</body>
+</html>
